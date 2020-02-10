@@ -20,6 +20,7 @@ class MoviesController < ApplicationController
     else
       @movies = Movie.all.order(@sort)
     end
+    @movies
   end
 
   def new
