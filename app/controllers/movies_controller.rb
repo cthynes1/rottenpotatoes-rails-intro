@@ -18,8 +18,10 @@ class MoviesController < ApplicationController
       @user_selection = params[:ratings]
       @movies = Movie.where(rating: @user_selection.keys).order(@sort)
     else
+      
       @movies = Movie.all.order(@sort)
     end
+    @movies
   end
 
   def new
